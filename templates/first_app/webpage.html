@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Django Level Two</title>
+    <link rel="stylesheet" href="{% static 'css/MyStyle.css' %}"/>
+  </head>
+  <body>
+    <h1>Hi, welcome to Django Level Two!</h1>
+    <h2>Here are your Web records:</h2>
+    <div class="container">
+        <div class="djangtwo">
+
+
+
+      {% if webpages_records %}
+          <table border="1">
+            <thead>
+              <th id="a">Site Topic</th>
+              <th id="a">Site Name</th>
+              <th id="a">Site Url</th>
+            </thead>
+
+            {% for web in webpages_records %}
+              <tr>
+                <td>{{ web.topic }}</td>
+                <td>{{ web.name }}</td>
+                <td>{{ web.url }}</td>
+              </tr>
+            {% endfor %}
+
+          </table>
+      {% else %}
+        <p>No web Records. Table Not Created.</p>
+      {% endif %}
+        </div>
+    </div>
+
+
+
+  </body>
+</html>

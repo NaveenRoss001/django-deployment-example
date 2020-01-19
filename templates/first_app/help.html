@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+{% load static %}
+{% static "images" as baseUrl %}
+<html lang="en"
+
+<head>
+    <meta charset="UTF-8">
+    <title>first app</title>
+    <link rel="stylesheet" href="{% static "css/MyStyle.css" %}">
+</head>
+<body>
+  <h1>Hello This is Help.html</h1>
+  <h1>{{insert_me}}</h1>
+<img src="{% static 'images/puneeth.jpg' %}" alt="Image Not Found !!">
+  </body>
+</html>

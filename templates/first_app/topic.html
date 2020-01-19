@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Django Level Two</title>
+    <link rel="stylesheet" href="{% static "css/MyStyle.css" %}"/>
+  </head>
+  <body>
+    <h1>Hi, welcome to Django Level Two!</h1>
+    <h2>Here are your Topic records:</h2>
+    <div class="djangtwo">
+      {% if topic_records %}
+          <table>
+            <thead>
+              <th>Topics</th>
+            </thead>
+
+            {% for top in topic_records %}
+              <tr>
+                <td>{{ top.top_name }}</td>
+              </tr>
+            {% endfor %}
+        </table>
+
+      {% else %}
+        <p>No Topic Records. Table Not Created.</p>
+      {% endif %}
+    </div>
+
+
+  </body>
+</html>
